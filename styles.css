@@ -1,0 +1,103 @@
+/* General body styling */
+body {
+    font-family: 'Helvetica Neue', sans-serif; /* Elegant font */
+    background: linear-gradient(135deg, #2b5876, #4e4376); /* Subtle gradient background */
+    color: #f8f8f8; /* Light text color for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Container styling */
+.container {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 15px; /* Soft rounded corners */
+    padding: 40px 50px; /* Generous padding */
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 600px; /* Limit width */
+    width: 100%; /* Full width within the container limits */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+}
+
+/* Hover effect on the container */
+.container:hover {
+    transform: translateY(-5px); /* Lift the container slightly */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+/* Styling the button */
+button {
+    padding: 15px 30px; /* Larger button size */
+    font-size: 18px; /* Bigger text size */
+    color: #fff; /* Text color */
+    background-color: #8e44ad; /* Rich purple background */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+    outline: none;
+}
+
+button:hover {
+    background-color: #732d91; /* Darker purple on hover */
+    transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+/* Styling the quote display */
+#quoteDisplay {
+    font-size: 1.4em; /* Larger text size for better readability */
+    color: #333; /* Darker text for better contrast */
+    font-style: italic; /* Italicize for a distinguished look */
+    margin: 20px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7); /* Light background behind the quote */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+#quoteDisplay:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Highlight the quote on hover */
+}
+
+/* Styling for the heading */
+h1 {
+    font-size: 2.5em; /* Larger heading font size */
+    font-weight: bold; /* Bold text */
+    color: #f1f1f1; /* Light color */
+    letter-spacing: 2px; /* Slightly spaced letters for sophistication */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px; /* Reduce padding on small screens */
+        max-width: 90%; /* Allow container to take up more width */
+    }
+    button {
+        padding: 12px 24px; /* Adjust button padding for smaller screens */
+    }
+    #quoteDisplay {
+        font-size: 1.2em; /* Slightly smaller font for the quote */
+    }
+}
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in animation to quote display */
+#quoteDisplay {
+    animation: fadeIn 1s ease-out; /* Smooth fade-in effect for the quote */
+}
